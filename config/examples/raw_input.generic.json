@@ -1,0 +1,12 @@
+{
+  "n_groups": 7,
+  "n_replicates": 3,
+  "container_layout": "96_position",
+  "unit_volume_ul": 100,
+  "per_unit_quantity": 20000,
+  "per_unit_quantity_unit": "units",
+  "duration_h": 72,
+  "disturbance_events": 3,
+  "material_handling_profile": "high_loss",
+  "emit_concrete_layout": false
+}

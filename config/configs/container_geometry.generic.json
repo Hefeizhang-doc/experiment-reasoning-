@@ -1,0 +1,87 @@
+{
+  "version": "0.1",
+  "description": "Optional external container geometry. Use if you refactor kernel to load container definitions from config.",
+  "containers": {
+    "96-unit": {
+      "rows": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H"
+      ],
+      "cols": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "preferred_rows": [
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ],
+      "preferred_cols": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "notes": "Generic 96-position container; preferred region avoids perimeter."
+    },
+    "24-unit": {
+      "rows": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "cols": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "preferred_rows": [
+        "B",
+        "C"
+      ],
+      "preferred_cols": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "notes": "Generic 24-position container; preferred capacity is limited."
+    },
+    "freeform": {
+      "rows": [],
+      "cols": [],
+      "preferred_rows": [],
+      "preferred_cols": [],
+      "notes": "Use when there is no grid layout; adapter should provide layout constraints separately."
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "observations": [
+    {
+      "experiment_id": "run_001",
+      "context": {
+        "x1": 1,
+        "x2": 24,
+        "x3": 4,
+        "x4": "A"
+      },
+      "prediction": {
+        "expected": 1.2
+      },
+      "outcome": {
+        "observed": 1.25
+      },
+      "deltas": {
+        "target_error": 0.05
+      }
+    },
+    {
+      "experiment_id": "run_002",
+      "context": {
+        "x1": 3,
+        "x2": 72,
+        "x3": 7,
+        "x4": "A"
+      },
+      "prediction": {
+        "expected": 1.55
+      },
+      "outcome": {
+        "observed": 1.9
+      },
+      "deltas": {
+        "target_error": 0.35
+      }
+    },
+    {
+      "experiment_id": "run_003",
+      "context": {
+        "x1": 2,
+        "x2": 72,
+        "x3": 10,
+        "x4": "B"
+      },
+      "prediction": {
+        "expected": 1.45
+      },
+      "outcome": {
+        "observed": 1.75
+      },
+      "deltas": {
+        "target_error": 0.3
+      }
+    }
+  ],
+  "target_delta": "target_error",
+  "variable_schema": {
+    "x1": {
+      "kind": "numeric",
+      "description": "generic numeric input 1"
+    },
+    "x2": {
+      "kind": "numeric",
+      "description": "generic numeric input 2"
+    },
+    "x3": {
+      "kind": "numeric",
+      "description": "generic numeric input 3"
+    },
+    "x4": {
+      "kind": "categorical",
+      "description": "generic categorical input"
+    }
+  }
+}

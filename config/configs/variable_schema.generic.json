@@ -1,0 +1,34 @@
+{
+  "version": "0.1",
+  "description": "Optional schema for scientist agent variable discovery. The kernel can run without this.",
+  "variables": {
+    "x1": {
+      "kind": "numeric",
+      "description": "Generic numeric variable 1",
+      "role": "candidate_cause"
+    },
+    "x2": {
+      "kind": "numeric",
+      "description": "Generic numeric variable 2",
+      "role": "candidate_cause"
+    },
+    "x3": {
+      "kind": "numeric",
+      "description": "Generic numeric variable 3",
+      "role": "candidate_cause"
+    },
+    "x4": {
+      "kind": "categorical",
+      "description": "Generic categorical variable",
+      "role": "candidate_cause"
+    },
+    "run_id": {
+      "exclude": true,
+      "description": "Identifier, not a causal variable."
+    },
+    "timestamp": {
+      "exclude": true,
+      "description": "Metadata; exclude unless explicitly modeling time/order effects."
+    }
+  }
+}

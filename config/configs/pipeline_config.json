@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "description": "Wiring config: raw input -> adapter -> reasoning kernel -> scientist loop.",
+  "stages": {
+    "adapter": {
+      "enabled": true,
+      "config_path": "configs/adapter_mapping.generic.json"
+    },
+    "reasoning_kernel": {
+      "enabled": true,
+      "module": "experimental_reasoning_kernel_v8_2_1",
+      "entrypoint": "experimental_reasoning_kernel_v8_2"
+    },
+    "scientist_agent": {
+      "enabled": true,
+      "module": "experimental_scientist_agent_v12_1",
+      "entrypoint": "experimental_scientist_agent_v12_1",
+      "config_path": "configs/scientist_agent_config.json"
+    },
+    "memory": {
+      "enabled": true,
+      "config_path": "configs/memory_config.local.json"
+    }
+  }
+}

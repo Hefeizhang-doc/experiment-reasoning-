@@ -1,0 +1,21 @@
+{
+  "version": "0.1",
+  "description": "Config for v12.1 scientist loop.",
+  "target_delta": "target_error",
+  "max_hypotheses": 5,
+  "variable_discovery": {
+    "min_presence_fraction": 0.5,
+    "max_categorical_cardinality": 20,
+    "exclude_default_metadata": true
+  },
+  "signal_mining": {
+    "min_n_for_medium_confidence": 3,
+    "numeric_method": "median_high_vs_low",
+    "categorical_method": "category_vs_global_mean"
+  },
+  "variable_schema_path": "configs/variable_schema.generic.json",
+  "notes": [
+    "Variable names should come from adapter output or observation.context.",
+    "This config does not contain domain vocabulary."
+  ]
+}

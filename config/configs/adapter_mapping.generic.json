@@ -1,0 +1,62 @@
+{
+  "version": "0.1",
+  "description": "Generic adapter mapping. No domain vocabulary is required by the kernel.",
+  "field_aliases": {
+    "n_groups": "groups",
+    "n_replicates": "replicates",
+    "container": "container_format",
+    "unit_volume_ul": "volume_per_unit_ul",
+    "per_unit_quantity": "quantity_per_unit",
+    "per_unit_quantity_unit": "quantity_unit",
+    "duration_h": "duration_hours"
+  },
+  "defaults": {
+    "quantity_unit": "units",
+    "transfer_overage_rate": 0.08,
+    "disturbance_loss_per_event": 0.1,
+    "long_duration_drift_rate": 0.1,
+    "batching_overhead_rate": 0.1,
+    "layout_reserve_fraction": 0.1,
+    "long_duration_threshold_hours": 48,
+    "many_groups_threshold": 8
+  },
+  "rules": [
+    {
+      "name": "high_loss_material_profile",
+      "when": {
+        "field": "material_handling_profile",
+        "equals": "high_loss"
+      },
+      "set": {
+        "disturbance_loss_per_event": 0.2
+      },
+      "rationale": "External adapter rule: high-loss material profiles should apply higher per-disturbance reserve."
+    },
+    {
+      "name": "low_loss_material_profile",
+      "when": {
+        "field": "material_handling_profile",
+        "equals": "low_loss"
+      },
+      "set": {
+        "disturbance_loss_per_event": 0.05
+      },
+      "rationale": "External adapter rule: low-loss material profiles can use lower per-disturbance reserve."
+    },
+    {
+      "name": "map_96_position_container",
+      "when": {
+        "field": "container_layout",
+        "equals": "96_position"
+      },
+      "set": {
+        "container_format": "96-unit"
+      },
+      "rationale": "External adapter rule: maps local container naming to kernel container format."
+    }
+  ],
+  "notes": [
+    "Rules are intentionally generic. A domain-specific adapter may add vocabulary such as assay/material/instrument names outside the kernel.",
+    "If a rule has no match, the defaults remain in effect."
+  ]
+}

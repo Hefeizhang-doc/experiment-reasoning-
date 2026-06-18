@@ -1,0 +1,25 @@
+{
+  "version": "0.1",
+  "description": "Generic loss/resource policy. These values should be tuned from local history.",
+  "rates": {
+    "transfer_overage_rate": 0.08,
+    "disturbance_loss_per_event": 0.1,
+    "long_duration_drift_rate": 0.1,
+    "batching_overhead_rate": 0.1
+  },
+  "thresholds": {
+    "long_duration_threshold_hours": 48,
+    "many_groups_threshold": 8,
+    "low_replicate_threshold": 3
+  },
+  "layout": {
+    "layout_reserve_fraction": 0.1,
+    "prefer_non_edge_positions": true
+  },
+  "update_policy": {
+    "learn_from_observations": false,
+    "min_observations_before_update": 5,
+    "max_single_update_fraction": 0.15,
+    "require_human_approval_before_writing_config": true
+  }
+}

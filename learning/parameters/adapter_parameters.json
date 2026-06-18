@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "description": "Current adapter parameter beliefs. Domain adapters read these values and inject them into the kernel.",
+  "parameters": {
+    "transfer_overage_rate": {
+      "value": 0.08,
+      "description": "Generic transfer/dead-volume/measurement reserve.",
+      "source": "initial_default",
+      "n_updates": 0
+    },
+    "disturbance_loss_per_event": {
+      "value": 0.1,
+      "description": "Generic per-disturbance material loss.",
+      "source": "initial_default",
+      "n_updates": 0
+    },
+    "long_duration_drift_rate": {
+      "value": 0.1,
+      "description": "Generic accumulated drift over long-duration runs.",
+      "source": "initial_default",
+      "n_updates": 0
+    },
+    "batching_overhead_rate": {
+      "value": 0.1,
+      "description": "Generic overhead from many groups/batches/timing burden.",
+      "source": "initial_default",
+      "n_updates": 0
+    }
+  },
+  "history": []
+}

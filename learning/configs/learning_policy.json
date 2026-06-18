@@ -1,0 +1,29 @@
+{
+  "version": "0.1",
+  "description": "Domain-agnostic learning policy for adapter parameters.",
+  "learning": {
+    "enabled": true,
+    "mode": "proposal_only",
+    "require_human_approval": true,
+    "min_observations_before_update": 3,
+    "learning_rate": 0.2,
+    "max_single_update_fraction": 0.15,
+    "max_parameter_value": 2.0,
+    "min_parameter_value": 0.0,
+    "confidence_threshold_to_auto_recommend": "medium"
+  },
+  "attribution": {
+    "default_strategy": "explicit_or_equal_split",
+    "require_attribution_for_high_impact_updates": true,
+    "notes": [
+      "If observation.attribution is provided, use it to distribute prediction error across parameters.",
+      "If attribution is missing, split error across eligible parameters with low confidence."
+    ]
+  },
+  "safety": {
+    "never_auto_execute_experiments": true,
+    "never_auto_apply_parameter_updates_without_approval": true,
+    "log_every_update_proposal": true,
+    "keep_previous_parameter_versions": true
+  }
+}
