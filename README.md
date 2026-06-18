@@ -109,14 +109,14 @@ Most experimentalists rely on intuition and static spreadsheets. This framework 
 
 ```bash
 # Clone into your Claude Code skills directory
-git clone https://github.com/YOUR_USERNAME/experiment-reasoning.git ~/.claude/skills/experiment-reasoning
+git clone https://github.com/Hefeizhang-doc/experiment-reasoning-.git ~/.claude/skills/experiment-reasoning
 ```
 
 Or symlink if you've cloned elsewhere:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/experiment-reasoning.git
-ln -s $(pwd)/experiment-reasoning ~/.claude/skills/experiment-reasoning
+git clone https://github.com/Hefeizhang-doc/experiment-reasoning-.git
+ln -s $(pwd)/experiment-reasoning- ~/.claude/skills/experiment-reasoning
 ```
 
 ### Verify it's loaded
